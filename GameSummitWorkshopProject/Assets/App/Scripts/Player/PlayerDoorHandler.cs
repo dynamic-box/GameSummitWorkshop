@@ -1,5 +1,4 @@
 using DynamicBox.EventManagement;
-using DynamicBox.Events;
 using DynamicBox.Interactables;
 using UnityEngine;
 
@@ -15,7 +14,6 @@ namespace DynamicBox.Player
             switch (other.tag)
             {
                 case "Door":
-                    EventManager.Instance.Raise(new OnEnteredDoorTriggerEvent(keyID));
                     break;
 
                 case "Key":

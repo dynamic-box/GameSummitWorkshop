@@ -1,5 +1,4 @@
 using DynamicBox.EventManagement;
-using DynamicBox.Events;
 using System;
 using System.Threading.Tasks;
 using UnityEngine;
@@ -22,24 +21,9 @@ namespace DynamicBox.Interactables
 
         #region Unity Methods
 
-        private void OnEnable()
-        {
-            EventManager.Instance.AddListener<OnEnteredDoorTriggerEvent>(OnEnteredDoorTriggerHandler);
-        }
-
-        private void OnDisable()
-        {
-            EventManager.Instance.RemoveListener<OnEnteredDoorTriggerEvent>(OnEnteredDoorTriggerHandler);
-        }
-
         #endregion
 
         #region Event Handlers
-
-        private void OnEnteredDoorTriggerHandler(OnEnteredDoorTriggerEvent eventDetails)
-        {
-            CheckDoorKeyID(eventDetails.KeyID);
-        }
 
         #endregion
 
