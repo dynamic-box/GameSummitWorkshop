@@ -23,20 +23,20 @@ namespace DynamicBox.Player
             }
         }
 
-        private void CheckDoor(Door door)
-        {
-            if (door.IsDoorUnlocked)
-            {
-                door.LoadNextLevel();
-            }
-            else
-            {
-                if (door.CheckDoorKeyID(keyID))
-                {
-                    Debug.Log("Door unlocked");
-                }
-            }
-        }
+        //private void CheckDoor(Door door)
+        //{
+        //    if (door.IsDoorUnlocked)
+        //    {
+        //        door.LoadNextLevel();
+        //    }
+        //    else
+        //    {
+        //        if (door.CheckDoorKeyID(keyID))
+        //        {
+        //            Debug.Log("Door unlocked");
+        //        }
+        //    }
+        //}
 
         private void PickUpKey(Key key)
         {
